@@ -67,7 +67,6 @@ public class LoginWindow extends JFrame {
                     return;
                 }
 
-                //JOptionPane.showMessageDialog(null, "Successfully logged in");
                 try {
                     Connection conection = ConnectionFactory.getConnection(
                             "localhost", 5432, "controlevinhos", "postgres", "admin");
@@ -82,7 +81,9 @@ public class LoginWindow extends JFrame {
                             JOptionPane.showMessageDialog(null, "Invalid user or password!");
                             return;
                         }
-                        JOptionPane.showMessageDialog(null, "Successfully logged in!");
+                        //JOptionPane.showMessageDialog(null, "Successfully logged in!");
+                        new MainMenu().setVisible(true);
+                        dispose();
                     } else {
                         JOptionPane.showMessageDialog(null, "Connection failure!");
                     }

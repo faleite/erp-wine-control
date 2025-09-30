@@ -14,9 +14,8 @@
  ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚══════╝    ╚══════╝   ╚═╝   ╚══════╝   ╚═╝   ╚══════╝╚═╝     ╚═╝                                                                                  
 ```
 
->[!NOTE]
-> Stopped Video in: 1h:19min
-> [video](/media/faleite/External/VideoAulas/curso-completo-java-matheus/aula02.mkv)
+<!-- Stopped Video in: 1h46min -->
+[lesson](/media/faleite/External/VideoAulas/curso-completo-java-matheus/aula02.mkv) 
 
 ## Resources
 - [jdbc.postgres](https://jdbc.postgresql.org/download/)
