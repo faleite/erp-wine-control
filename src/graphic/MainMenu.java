@@ -14,7 +14,8 @@ public class MainMenu extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
 
-        this.desktopPane = new JDesktopPane();
+        // this.desktopPane = new JDesktopPane();
+        this.desktopPane = new DesktopBackround("./dcs/images/grapes.jpg");
         setContentPane(desktopPane);
 
         JMenuBar menuBar = new JMenuBar();
@@ -28,10 +29,12 @@ public class MainMenu extends JFrame {
             JMenuItem itemRegions = new JMenuItem("Regions");
             JMenuItem itemWineries = new JMenuItem("Wineries");
             JMenuItem itemGrapes = new JMenuItem("Grapes");
+            JMenuItem itemWines = new JMenuItem("Wines");
         menuRegister.add(itemCountries);
         menuRegister.add(itemRegions);
         menuRegister.add(itemWineries);
         menuRegister.add(itemGrapes);
+        menuRegister.add(itemWines);
 
         JMenu menuReport = new JMenu("Report");
             JMenuItem itemSalesReport = new JMenuItem("Sales Report");
@@ -43,5 +46,20 @@ public class MainMenu extends JFrame {
 
         setJMenuBar(menuBar);
 
+    }
+
+    static class DesktopBackround extends JDesktopPane {
+
+        private Image imageBackground;
+
+        public DesktopBackround(String imagePath) {
+            this.imageBackground = new ImageIcon(imagePath).getImage();
+        }
+
+        @Override
+        public void paint(Graphics g) {
+            super.paint(g);
+            g.drawImage(imageBackground, 0,0, getWidth(), getHeight(), this);
+        }
     }
 }
